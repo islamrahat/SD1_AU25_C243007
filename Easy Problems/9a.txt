@@ -1,0 +1,38 @@
+/*
+    Count vowels and consonants in a string
+*/
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        
+        String text = input.nextLine();
+        
+        int vowels = 0;
+        for(int i=0; i<text.length(); i++)
+        {
+            switch (text.charAt(i)) 
+            {
+                case 'a':
+                    vowels++;
+                    break;
+                case 'e':
+                    vowels++;
+                    break;
+                case 'i':
+                    vowels++;
+                    break;
+                case 'o':
+                    vowels++;
+                    break;
+                case 'u':
+                    vowels++;
+                    break;
+            }
+        }
+        System.out.println("Vowels: "+vowels+"\nConsonents: "+(text.length()-vowels));
+    }
+}

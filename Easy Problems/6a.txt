@@ -1,0 +1,27 @@
+/*
+    Search for an element in an array
+*/
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        
+        int number = input.nextInt();
+        int[] arr = new int[number];
+
+        for(int i=0; i<number; i++)
+        {
+            arr[i] = input.nextInt();
+        }
+        System.out.printf("What do you wanna search for? : ");
+        int target = input.nextInt(), f=0;
+        for(int i=0; i<number; i++)
+        {
+            if(arr[i]==target) {System.out.println("It Exists!\nIndex: "+i); f=1;}
+        }
+        if(f==0) {System.out.println("It doesn't Exist -_-");}
+    }
+}
